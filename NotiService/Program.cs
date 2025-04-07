@@ -17,7 +17,7 @@ namespace Marshrutka
 
             var notifier = new TicketNotifier(telegramBotToken);
 
-            var monitor = new HockeyMonitor(TimeSpan.FromSeconds(20), "Минск", telegramChatIds);
+            var monitor = new HockeyMonitor(TimeSpan.FromSeconds(20), "Трактор", telegramChatIds);
             await monitor.StartMonitoring(notifier);
         }
 
