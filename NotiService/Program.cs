@@ -1,4 +1,4 @@
-using Marshrutka.Hockey;
+п»їusing Marshrutka.Hockey;
 using Telegram.Bot.Types;
 
 namespace Marshrutka
@@ -13,11 +13,11 @@ namespace Marshrutka
         [STAThread]
         public static async Task Main()
         {
-            Console.WriteLine("Мониторинг билетов на хоккей.");
+            Console.WriteLine("РњРѕРЅРёС‚РѕСЂРёРЅРі Р±РёР»РµС‚РѕРІ РЅР° С…РѕРєРєРµР№.");
 
             var notifier = new TicketNotifier(telegramBotToken);
 
-            var monitor = new HockeyMonitor(TimeSpan.FromSeconds(20), "Трактор", telegramChatIds);
+            var monitor = new HockeyMonitor(TimeSpan.FromSeconds(20), "РўСЂР°РєС‚РѕСЂ", telegramChatIds);
             await monitor.StartMonitoring(notifier);
         }
 
