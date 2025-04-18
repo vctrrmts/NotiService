@@ -6,13 +6,12 @@ namespace Marshrutka.Hockey
     {
         private readonly HttpClient _httpClient;
         private const string BaseUrl = "https://www.ticketpro.by/bilety-na-sportivnye-meropriyatiya/bilety-na-xokkej/";
-
         public HockeyParser()
         {
             _httpClient = new HttpClient();
         }
 
-        public async Task<List<EventModel>> ParseTickets(string teamName)
+        public async Task<List<EventModel>> ParseTickets()
         {
             List<EventModel> events = new List<EventModel>();
             try
